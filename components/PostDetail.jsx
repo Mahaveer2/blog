@@ -4,7 +4,7 @@ import moment from 'moment';
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
-    let modifiedText = text;
+    let modifiedText = text; 
 
     if (obj) {
       if (obj.bold) {
@@ -17,6 +17,9 @@ const PostDetail = ({ post }) => {
 
       if (obj.underline) {
         modifiedText = (<u key={index}>{text}</u>);
+      }
+      if(obj.type=="code-block" ){
+        modifiedText = (<code className='block cod whitespace-pre overflow-x-scroll bg-gray-200 p-5' key={index}>{text}</code>);
       }
     }
 
