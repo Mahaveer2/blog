@@ -14,6 +14,25 @@ const PostDetail = ({ post }) => {
       if (obj.italic) {
         modifiedText = (<em key={index}>{text}</em>);
       }
+      
+
+      if(obj.type == 'link'){
+        modifiedText = (<a className='text-blue-500' href={obj.href} key={index}>{obj.children[0].text}</a>); 
+      }
+
+      if(obj.type == 'bulleted-list'){
+
+        obj.children.forEach(_obj => {
+          _obj.children.forEach(l => {
+            l.children.forEach((c,i) => {
+              if(c.bold){
+                let subtext =l.children[i+1].text
+                modifiedText = (<li><b key={index}>{c.text}</b> {subtext}</li>);
+              }
+            })
+          })
+        })
+      }
 
       if (obj.underline) {
         modifiedText = (<u key={index}>{text}</u>);
