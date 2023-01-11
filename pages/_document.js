@@ -11,13 +11,13 @@ class MyDocument extends Document {
       <Html>
         <Head>
         <meta name="google-site-verification" content="sIb_6pn3SEuVd-r3vJnNpuHXaq4l7FVxU_5I35LE5_k" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9486411437483012"
+     crossorigin="anonymous"></script>
           {/* <meta name="viewport" content="width=device-width,minimum-scale=1, initial-scale=1" /> */}
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9486411437483012"
-     crossorigin="anonymous"></script>
         </body>
       </Html>
     );
